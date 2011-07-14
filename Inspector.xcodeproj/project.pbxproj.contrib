@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2701BFEF12E5070100A26685 /* NetworkRequestImpl+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A935D112B6E0C0008D98F5 /* NetworkRequestImpl+SPY.m */; };
+		2701BFF412E5081E00A26685 /* ServiceImpl+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 2701BFF312E5081E00A26685 /* ServiceImpl+SPY.h */; };
+		2701BFF712E509BC00A26685 /* ServiceImpl+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 27A935A312B6D870008D98F5 /* ServiceImpl+SPY.m */; };
+		2701C1A112E6130700A26685 /* MainLogger+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 2701C19F12E6130700A26685 /* MainLogger+SPY.h */; };
+		2701C1A212E6130700A26685 /* MainLogger+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 2701C1A012E6130700A26685 /* MainLogger+SPY.m */; };
+		273947FD12A5B22E005F6C0A /* NSObject+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 273947F512A5B22E005F6C0A /* NSObject+SPY.h */; };
+		273947FE12A5B22E005F6C0A /* NSObject+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 273947F612A5B22E005F6C0A /* NSObject+SPY.m */; };
+		273947FF12A5B22E005F6C0A /* SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 273947F712A5B22E005F6C0A /* SPY.h */; };
+		2739480012A5B22E005F6C0A /* SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 273947F812A5B22E005F6C0A /* SPY.m */; };
+		2739480112A5B22E005F6C0A /* UIView+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 273947F912A5B22E005F6C0A /* UIView+SPY.h */; };
+		2739480212A5B22E005F6C0A /* UIView+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 273947FA12A5B22E005F6C0A /* UIView+SPY.m */; };
+		2754F4F21328620D008AB935 /* TabularDataAdapter+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 2754F4F01328620D008AB935 /* TabularDataAdapter+SPY.h */; };
+		2754F4F31328620D008AB935 /* TabularDataAdapter+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 2754F4F11328620D008AB935 /* TabularDataAdapter+SPY.m */; };
+		275EEAF412974D2E00DA7123 /* MSTRMobileSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275EEAF312974D2E00DA7123 /* MSTRMobileSDK.framework */; };
+		276DC55C12F3371400ACFF18 /* NSURLConnection+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 276DC55A12F3371400ACFF18 /* NSURLConnection+SPY.h */; };
+		276DC55D12F3371400ACFF18 /* NSURLConnection+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 276DC55B12F3371400ACFF18 /* NSURLConnection+SPY.m */; };
+		276DC5E212F34D6400ACFF18 /* SAXSupport+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 276DC5E012F34D6400ACFF18 /* SAXSupport+SPY.h */; };
+		276DC5E312F34D6400ACFF18 /* SAXSupport+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 276DC5E112F34D6400ACFF18 /* SAXSupport+SPY.m */; };
+		AA747D9F0F9514B9006C5449 /* Inspector_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Inspector_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2701BFF312E5081E00A26685 /* ServiceImpl+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ServiceImpl+SPY.h"; sourceTree = "<group>"; };
+		2701C19F12E6130700A26685 /* MainLogger+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MainLogger+SPY.h"; sourceTree = "<group>"; };
+		2701C1A012E6130700A26685 /* MainLogger+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MainLogger+SPY.m"; sourceTree = "<group>"; };
+		273947F512A5B22E005F6C0A /* NSObject+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SPY.h"; path = "Classes/NSObject+SPY.h"; sourceTree = SOURCE_ROOT; };
+		273947F612A5B22E005F6C0A /* NSObject+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SPY.m"; path = "Classes/NSObject+SPY.m"; sourceTree = SOURCE_ROOT; };
+		273947F712A5B22E005F6C0A /* SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPY.h; path = Classes/SPY.h; sourceTree = SOURCE_ROOT; };
+		273947F812A5B22E005F6C0A /* SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPY.m; path = Classes/SPY.m; sourceTree = SOURCE_ROOT; };
+		273947F912A5B22E005F6C0A /* UIView+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+SPY.h"; path = "Classes/UIView+SPY.h"; sourceTree = SOURCE_ROOT; };
+		273947FA12A5B22E005F6C0A /* UIView+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+SPY.m"; path = "Classes/UIView+SPY.m"; sourceTree = SOURCE_ROOT; };
+		2754F4F01328620D008AB935 /* TabularDataAdapter+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TabularDataAdapter+SPY.h"; sourceTree = "<group>"; };
+		2754F4F11328620D008AB935 /* TabularDataAdapter+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TabularDataAdapter+SPY.m"; sourceTree = "<group>"; };
+		275EEAF312974D2E00DA7123 /* MSTRMobileSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MSTRMobileSDK.framework; path = ../../Library/MSTRMobileSDK.framework; sourceTree = SOURCE_ROOT; };
+		276DC55A12F3371400ACFF18 /* NSURLConnection+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+SPY.h"; sourceTree = "<group>"; };
+		276DC55B12F3371400ACFF18 /* NSURLConnection+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+SPY.m"; sourceTree = "<group>"; };
+		276DC5E012F34D6400ACFF18 /* SAXSupport+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SAXSupport+SPY.h"; sourceTree = "<group>"; };
+		276DC5E112F34D6400ACFF18 /* SAXSupport+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SAXSupport+SPY.m"; sourceTree = "<group>"; };
+		277BE98912B04207003873B6 /* SPY+MSTR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SPY+MSTR.h"; sourceTree = "<group>"; };
+		277BE98A12B04207003873B6 /* SPY+MSTR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SPY+MSTR.m"; sourceTree = "<group>"; };
+		27A935A312B6D870008D98F5 /* ServiceImpl+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ServiceImpl+SPY.m"; sourceTree = "<group>"; };
+		27A935D112B6E0C0008D98F5 /* NetworkRequestImpl+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkRequestImpl+SPY.m"; sourceTree = "<group>"; };
+		27A9360A12B6E5C2008D98F5 /* NetworkRequestImpl+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkRequestImpl+SPY.h"; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* Inspector_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Inspector_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libInspector.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInspector.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				275EEAF412974D2E00DA7123 /* MSTRMobileSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libInspector.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				273947F312A5B22E005F6C0A /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = Inspector;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				275EEAF312974D2E00DA7123 /* MSTRMobileSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		273947F312A5B22E005F6C0A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				273947F412A5B22E005F6C0A /* MSTR */,
+				273947F512A5B22E005F6C0A /* NSObject+SPY.h */,
+				273947F612A5B22E005F6C0A /* NSObject+SPY.m */,
+				273947F712A5B22E005F6C0A /* SPY.h */,
+				273947F812A5B22E005F6C0A /* SPY.m */,
+				273947F912A5B22E005F6C0A /* UIView+SPY.h */,
+				273947FA12A5B22E005F6C0A /* UIView+SPY.m */,
+				276DC55A12F3371400ACFF18 /* NSURLConnection+SPY.h */,
+				276DC55B12F3371400ACFF18 /* NSURLConnection+SPY.m */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		273947F412A5B22E005F6C0A /* MSTR */ = {
+			isa = PBXGroup;
+			children = (
+				2701BFF312E5081E00A26685 /* ServiceImpl+SPY.h */,
+				27A935A312B6D870008D98F5 /* ServiceImpl+SPY.m */,
+				277BE98912B04207003873B6 /* SPY+MSTR.h */,
+				277BE98A12B04207003873B6 /* SPY+MSTR.m */,
+				27A935D112B6E0C0008D98F5 /* NetworkRequestImpl+SPY.m */,
+				27A9360A12B6E5C2008D98F5 /* NetworkRequestImpl+SPY.h */,
+				2701C19F12E6130700A26685 /* MainLogger+SPY.h */,
+				2701C1A012E6130700A26685 /* MainLogger+SPY.m */,
+				276DC5E012F34D6400ACFF18 /* SAXSupport+SPY.h */,
+				276DC5E112F34D6400ACFF18 /* SAXSupport+SPY.m */,
+				2754F4F01328620D008AB935 /* TabularDataAdapter+SPY.h */,
+				2754F4F11328620D008AB935 /* TabularDataAdapter+SPY.m */,
+			);
+			name = MSTR;
+			path = Classes/MSTR;
+			sourceTree = SOURCE_ROOT;
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* Inspector_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* Inspector_Prefix.pch in Headers */,
+				273947FD12A5B22E005F6C0A /* NSObject+SPY.h in Headers */,
+				273947FF12A5B22E005F6C0A /* SPY.h in Headers */,
+				2739480112A5B22E005F6C0A /* UIView+SPY.h in Headers */,
+				2701BFF412E5081E00A26685 /* ServiceImpl+SPY.h in Headers */,
+				2701C1A112E6130700A26685 /* MainLogger+SPY.h in Headers */,
+				276DC55C12F3371400ACFF18 /* NSURLConnection+SPY.h in Headers */,
+				276DC5E212F34D6400ACFF18 /* SAXSupport+SPY.h in Headers */,
+				2754F4F21328620D008AB935 /* TabularDataAdapter+SPY.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* Inspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Inspector" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Inspector;
+			productName = Inspector;
+			productReference = D2AAC07E0554694100DB518D /* libInspector.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "Inspector" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* Inspector */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* Inspector */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				273947FE12A5B22E005F6C0A /* NSObject+SPY.m in Sources */,
+				2739480012A5B22E005F6C0A /* SPY.m in Sources */,
+				2739480212A5B22E005F6C0A /* UIView+SPY.m in Sources */,
+				2701BFEF12E5070100A26685 /* NetworkRequestImpl+SPY.m in Sources */,
+				2701BFF712E509BC00A26685 /* ServiceImpl+SPY.m in Sources */,
+				2701C1A212E6130700A26685 /* MainLogger+SPY.m in Sources */,
+				276DC55D12F3371400ACFF18 /* NSURLConnection+SPY.m in Sources */,
+				276DC5E312F34D6400ACFF18 /* SAXSupport+SPY.m in Sources */,
+				2754F4F31328620D008AB935 /* TabularDataAdapter+SPY.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/Inspector.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Inspector_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = Inspector;
+				USER_HEADER_SEARCH_PATHS = "../../Library/MSTRMobileSDK.framework/Headers ../../../../../Kernel/IPhone/MSTRMobileSDK/Classes/** ../../MSTRMobileSDK/Classes/** ../../../../../Kernel/IPhone/IPadDashboardViewer/Classes/**";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/Inspector.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library\"",
+				);
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Inspector_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = Inspector;
+				USER_HEADER_SEARCH_PATHS = "../../Library/MSTRMobileSDK.framework/Headers ../../../../../Kernel/IPhone/Library/MicroStrategyMobileSDK.framework/Headers ../../../../../Kernel/IPhone/MSTRMobileSDK/Classes/** ../../MSTRMobileSDK/Classes/**";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.2;
+				USER_HEADER_SEARCH_PATHS = ../../Library/MSTRMobileSDK.framework/Headers;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.2;
+				USER_HEADER_SEARCH_PATHS = ../../Library/MSTRMobileSDK.framework/Headers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "Inspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "Inspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
