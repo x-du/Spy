@@ -13,21 +13,28 @@
 
 @implementation UIView (SPY)
 
-- (NSString*) help {
++ (NSString*) help {
     NSArray* methods = [NSArray arrayWithObjects:
                         @"",
-                        @"SPY functions you can use from UIView:",
+                        @"SPY additions on UIView:",
                         @" printTree:(int)      Print the view tree, with initial indentation.",
                         @" printTree            Print the view tree.",
                         @"",
                         nil];
-    
-	NSString* rtnS = @"";
-    if ([super respondsToSelector:@selector(help)]) {
-        rtnS = [super help];
-	}
-	return [NSString stringWithFormat:@"%@\n%@", [methods componentsJoinedByString:@"\n"], rtnS];
+//    return [methods componentsJoinedByString:@"\n"];
+	return [NSString stringWithFormat:@"%@\n%@",[methods componentsJoinedByString:@"\n"], [NSObject help]];
 }
+
+//+ (NSString*) help {
+//    
+//	NSString* rtnS = @"";
+////    Class superClass = [self superclass];
+////    if 
+////    if ([super respondsToSelector:@selector(help)]) {
+////        rtnS = [[[self class] superclass] help];
+////	}
+//	return [NSString stringWithFormat:@"%@\n%@",[[self class] help] , rtnS];
+//}
 
 -(NSString*) printTree:(int) indent {
 	

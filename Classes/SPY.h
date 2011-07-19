@@ -6,22 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSObject+SPY.h"
+#import "NSData+SPY.h"
+#import "UIView+SPY.h"
+#import "UIWindow+SPY.h"
 
-@interface SPY : NSObject {
-}
-
-/**
- * Return the root window
- */
-+ (UIWindow*) rootWindow;
-/**
- * Return the definition of the class
- */
-+ (NSString*) defn : (Class) cls;
-
-/** 
- * Print the help. 
- */ 
-+ (NSString*) help; 
-
-@end

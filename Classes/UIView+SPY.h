@@ -9,8 +9,9 @@
 
 
 @interface UIView (SPY)
-- (NSString*) help;
--(NSString*) printTree:(int) indent;
--(NSString*) printTree;
++ (NSString*) help;
+//- (NSString*) help;
+- (NSString*) printTree:(int) indent;
+- (NSString*) printTree;
 
 @end

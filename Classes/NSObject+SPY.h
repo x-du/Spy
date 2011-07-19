@@ -9,25 +9,42 @@
 
 
 @interface NSObject (SPY) 
-- (NSString*) help;
-- (Class) getSPY;
-- (NSString*) defn;
-- (NSString*) defn: (NSString*) className;
-- (UIView*) rootWindow;
+
 
 /**
- * Return the short description of the object, similar to default NSObject description. 
+ * Return the root window
  */
-- (NSString*) shortDescription;
++ (UIWindow*) rootWindow;
+
+/** 
+ * Print the help. 
+ */ 
+- (NSString*) help; 
++ (NSString*) help;
++ (NSString*) helpSPY;
+
+
+/**
+ * Return the definition of the class
+ */
+- (NSString*) defn;
+- (NSString*) defnC : (Class) cls;
+- (NSString*) defn: (NSString*) className;
+
 
 /**
  * Return the long description that recursively list all ivars. Use visitedInstance dictionary to avoid infinit loop 
  */
-- (NSString*) longDescription:(NSMutableSet*) visitedInstances;
+- (NSString*) longDescription;
+- (NSString*) longDescription:(NSMutableSet*) visitedInstances indentation:(NSInteger) indentation;
 
 /**
  Return the description of the ivars
  */
-- (NSString*) ivarDescription:(NSMutableSet*) visitedInstances recursive:(BOOL) recursive;
-	
+- (NSString*) ivarDescription:(NSMutableSet*) visitedInstances recursive:(BOOL) recursive indentation:(NSInteger) indentation;	
+
+- (NSString*) spaces:(NSInteger) i;
+
+- (NSString*) convertTypeS: (NSString*) t;
+
 @end
