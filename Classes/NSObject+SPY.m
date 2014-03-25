@@ -305,7 +305,7 @@
             //NSLog(@"Got an error: %@", error);
             return @"";
         } else {
-            return [[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] autorelease];
+            return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
         }
     } else {
         //NSLog(@"Got an error: %@", error);
