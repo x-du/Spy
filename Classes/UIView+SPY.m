@@ -13,7 +13,7 @@
 
 @implementation UIView (SPY)
 
-+ (NSString*) help {
+- (NSString*) help {
     NSArray* methods = [NSArray arrayWithObjects:
                         @"",
                         @"SPY additions on UIView:",
@@ -25,16 +25,6 @@
 	return [NSString stringWithFormat:@"%@\n%@",[methods componentsJoinedByString:@"\n"], [NSObject help]];
 }
 
-//+ (NSString*) help {
-//    
-//	NSString* rtnS = @"";
-////    Class superClass = [self superclass];
-////    if 
-////    if ([super respondsToSelector:@selector(help)]) {
-////        rtnS = [[[self class] superclass] help];
-////	}
-//	return [NSString stringWithFormat:@"%@\n%@",[[self class] help] , rtnS];
-//}
 
 -(NSString*) printTree:(int) indent {
 	
@@ -50,7 +40,7 @@
 	//[rtn appendFormat:@",frame=(%0.0f, %0.0f, %0.0f, %0.0f)", self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height];
 	
 	for (int i=0;i<[[self subviews] count];i++) {
-		[rtn appendString:[[[self subviews] objectAtIndex:i] printTree:indent+1]];
+		[rtn appendString:[[[self subviews] objectAtIndex:i] printTree:indent+2]];
 	}
 	
 	

@@ -12,6 +12,9 @@
 
 @implementation NSObject (SPY)
 
+
+
+
 - (NSString*) convertTypeS: (NSString*) t {
     NSString* rtn = t;
     if ([t length] >=3) {
@@ -27,35 +30,110 @@
     return rtn;
 }
 
-- (NSString*) help {
-    
-    return [[self class] help];    
+
+- (NSString*) spaces:(NSInteger) i {
+    NSInteger tmp;
+    NSMutableString* rtn = [NSMutableString stringWithCapacity:i];
+    for (tmp = 0; tmp < i; tmp ++) {
+        [rtn appendString: @" "];
+    }
+    return rtn;
 }
 
-+ (NSString*) help  {
-    NSArray* methods = [NSArray arrayWithObjects:
-                        @"SPY additions on NSObject :\n",
-                        @" + rootWindow       Return the root window.",
-                        @" + defnC:(Class)cls Return the definition of the class.",
-                        @" + defn:(NSString*) Return the definition of the class.",
-                        @" - defn             Return the defintion of the class.",
-                        nil]; 
-	return [NSString stringWithFormat:@"%@\n\n%@", [methods componentsJoinedByString:@"\n"], [self helpSPY]];	
+
+
+- (NSString*) ivarDescription:(NSMutableSet*) visitedInstances recursive:(BOOL) recursive indentation:(NSInteger) indentation {
+    
+    if (visitedInstances == nil) {
+        visitedInstances = [NSMutableSet set];
+    }
+    if ([visitedInstances containsObject:self]) {
+        return @"";
+    }
+    
+    //If haven't visted...
+    
+    [visitedInstances addObject:self];
+    
+    //recurisve...
+    
+    NSMutableString* ivarDescription = [NSMutableString string];
+    
+	unsigned int varCount;
+    
+	Ivar *vars = class_copyIvarList([self class],&varCount);
+    
+	if (varCount==0)
+		return @"None";
+    
+	for (int i=0;i<varCount; i++) {
+		Ivar var = vars[i];
+        
+        NSString *nameString = [NSString stringWithCString:ivar_getName(var) encoding:NSASCIIStringEncoding];
+		NSString *typeString = [NSString stringWithCString:ivar_getTypeEncoding(var) encoding:NSASCIIStringEncoding];
+        
+        //		const char* name = ivar_getName(var);
+        //
+        //		const char* type = ivar_getTypeEncoding(var);
+        //
+        //		NSString* nameString = [NSString stringWithCString:name encoding:NSASCIIStringEncoding];
+        //
+        //		NSString* typeString = [NSString stringWithCString:type encoding:NSASCIIStringEncoding];
+        //
+		NSString* pureTypeString = [typeString stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"@\""]];
+        id object;
+        //TODO: Check
+        //[self valueForKey:@"_spinLock"] will throw exception
+        if ([@"NSManagedObjectContext" isEqualToString:pureTypeString]) {
+            continue;
+        }
+        object = [self valueForKey:nameString];
+        if ([object isKindOfClass:[NSObject class]]) {
+            NSString* description = [object longDescription:visitedInstances indentation:indentation];
+            // NSString* tabbedDescription = [description stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\t"];
+            [ivarDescription appendFormat:@"\n%@%@:%@ ",[self spaces:indentation], nameString, description];
+            
+        } else {
+            // What happend to primary types?
+        }
+        
+	}
+    
+	return ivarDescription;
+    
 }
+
+
 
 + (NSString*) helpSPY  {
     NSArray* methods = [NSArray arrayWithObjects:
                         @"SPY additions are added to the follow class. ",
                         @" NSObject",
                         @" NSData",
-                        @" NSURLConnection",
                         @" UIView",
-                        @" UIWindow",
-                        nil]; 
-	return [methods componentsJoinedByString:@"\n"];	
+                        nil];
+	return [methods componentsJoinedByString:@"\n"];
 }
 
-+ (UIWindow*) rootWindow {
++ (NSString*) help  {
+    NSArray* methods = [NSArray arrayWithObjects:
+                        @"SPY additions on NSObject :\n",
+                        @" - rootWindow       Return the root window.",
+                        @" - defnC:(Class)cls Return the definition of the class.",
+                        @" - defn:(NSString*) Return the definition of the class.",
+                        @" - defn             Return the defintion of the class.",
+                        @" - longDescription  Return the description recursively.",
+                        nil]; 
+	return [NSString stringWithFormat:@"%@\n\n%@", [methods componentsJoinedByString:@"\n"], [self helpSPY]];	
+}
+
+- (NSString*) help {
+    
+    return [[self class] help];
+}
+
+
+- (UIWindow*) rootWindow {
 	UIWindow* keyWindow = [[UIApplication sharedApplication] keyWindow];
 	return  keyWindow != nil ?  keyWindow : [[[UIApplication sharedApplication] windows] objectAtIndex:0];
 }
@@ -124,7 +202,7 @@
 		
 		SEL selector = method_getName(method);
 		
-		NSString *methodNameString = [NSString stringWithCString:(const char *)selector encoding:NSASCIIStringEncoding];
+		NSString *methodNameString = [NSString stringWithCString:sel_getName(selector) encoding:NSASCIIStringEncoding];
 		char returnType;
 		method_getReturnType(method, &returnType, 1);
 		
@@ -142,7 +220,7 @@
 		
 		Method method = methods[i];
 		SEL selector = method_getName(method);
-		NSString *methodNameString = [NSString stringWithCString:(const char *)selector encoding:NSASCIIStringEncoding];
+		NSString *methodNameString = [NSString stringWithCString:sel_getName(selector) encoding:NSASCIIStringEncoding];
 		char returnType;
 		method_getReturnType(method, &returnType, 1);
 		
@@ -189,10 +267,6 @@
 
 
 
-- (NSString*) longDescription {
-    return [self longDescription:nil indentation:0];
-}
-
 - (NSString*) longDescription:(NSMutableSet*) visitedInstances indentation:(NSInteger) indentation {
     
     NSString* desc = [self description];
@@ -214,81 +288,29 @@
     
 }
 
-- (NSString*) spaces:(NSInteger) i {
-    NSInteger tmp;
-    NSMutableString* rtn = [NSMutableString stringWithCapacity:i];
-    for (tmp = 0; tmp < i; tmp ++) {
-        [rtn appendString: @" "];
-    }
-    return rtn;
+
+- (NSString*) longDescription {
+    return [self longDescription:nil indentation:0];
 }
 
-
-//- (NSString*) shortDescription {
-//	return [NSString stringWithFormat:@"<%@: 0x%x>\n", [[self class] description], &self]; 
-//}
-
-
-- (NSString*) ivarDescription:(NSMutableSet*) visitedInstances recursive:(BOOL) recursive indentation:(NSInteger) indentation {
-
-    if (visitedInstances == nil) {
-        visitedInstances = [NSMutableSet set];
-    }
-    if ([visitedInstances containsObject:self]) {
+- (NSString*) jsonString {
+    
+    NSError *error;
+    if ([self isKindOfClass:[NSArray class]] || [self isKindOfClass:[NSDictionary class]]) {
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:self
+                                                           options:NSJSONWritingPrettyPrinted // Pass 0 if you don't care about the readability of the generated string
+                                                             error:&error];
+        
+        if (! jsonData) {
+            //NSLog(@"Got an error: %@", error);
+            return @"";
+        } else {
+            return [[[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding] autorelease];
+        }
+    } else {
+        //NSLog(@"Got an error: %@", error);
         return @"";
     }
-    
-    //If haven't visted...
-    
-    [visitedInstances addObject:self];
-
-    //recurisve...
-    
-    NSMutableString* ivarDescription = [NSMutableString string];
-    
-	unsigned int varCount;
-    
-	Ivar *vars = class_copyIvarList([self class],&varCount);
-    
-	if (varCount==0)
-		return @"None";
-    
-	for (int i=0;i<varCount; i++) {
-		Ivar var = vars[i];
-        
-        NSString *nameString = [NSString stringWithCString:ivar_getName(var) encoding:NSASCIIStringEncoding];
-		NSString *typeString = [NSString stringWithCString:ivar_getTypeEncoding(var) encoding:NSASCIIStringEncoding];
-
-//		const char* name = ivar_getName(var);
-//        
-//		const char* type = ivar_getTypeEncoding(var);
-//        
-//		NSString* nameString = [NSString stringWithCString:name encoding:NSASCIIStringEncoding];
-//        
-//		NSString* typeString = [NSString stringWithCString:type encoding:NSASCIIStringEncoding];
-//        
-		NSString* pureTypeString = [typeString stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"@\""]];
-        id object;
-        //TODO: Check
-        //[self valueForKey:@"_spinLock"] will throw exception
-        if ([@"NSManagedObjectContext" isEqualToString:pureTypeString]) {
-            continue;
-        } 
-        object = [self valueForKey:nameString];
-        if ([object isKindOfClass:[NSObject class]]) {
-            NSString* description = [object longDescription:visitedInstances indentation:indentation];
-           // NSString* tabbedDescription = [description stringByReplacingOccurrencesOfString:@"\n" withString:@"\n\t"];
-            [ivarDescription appendFormat:@"\n%@%@:%@ ",[self spaces:indentation], nameString, description];
-            
-        } else {
-            // What happend to primary types?
-        }
-        
-	}
-    
-	return ivarDescription;
-    
 }
-
 
 @end

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		273947FD12A5B22E005F6C0A /* NSObject+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 273947F512A5B22E005F6C0A /* NSObject+SPY.h */; };
 		273947FE12A5B22E005F6C0A /* NSObject+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 273947F612A5B22E005F6C0A /* NSObject+SPY.m */; };
-		273947FF12A5B22E005F6C0A /* SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 273947F712A5B22E005F6C0A /* SPY.h */; };
-		2739480012A5B22E005F6C0A /* SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 273947F812A5B22E005F6C0A /* SPY.m */; };
 		2739480112A5B22E005F6C0A /* UIView+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 273947F912A5B22E005F6C0A /* UIView+SPY.h */; };
 		2739480212A5B22E005F6C0A /* UIView+SPY.m in Sources */ = {isa = PBXBuildFile; fileRef = 273947FA12A5B22E005F6C0A /* UIView+SPY.m */; };
 		276DC55C12F3371400ACFF18 /* NSURLConnection+SPY.h in Headers */ = {isa = PBXBuildFile; fileRef = 276DC55A12F3371400ACFF18 /* NSURLConnection+SPY.h */; };
@@ -30,8 +28,6 @@
 /* Begin PBXFileReference section */
 		273947F512A5B22E005F6C0A /* NSObject+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SPY.h"; path = "Classes/NSObject+SPY.h"; sourceTree = SOURCE_ROOT; };
 		273947F612A5B22E005F6C0A /* NSObject+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SPY.m"; path = "Classes/NSObject+SPY.m"; sourceTree = SOURCE_ROOT; };
-		273947F712A5B22E005F6C0A /* SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SPY.h; path = Classes/SPY.h; sourceTree = SOURCE_ROOT; };
-		273947F812A5B22E005F6C0A /* SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SPY.m; path = Classes/SPY.m; sourceTree = SOURCE_ROOT; };
 		273947F912A5B22E005F6C0A /* UIView+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+SPY.h"; path = "Classes/UIView+SPY.h"; sourceTree = SOURCE_ROOT; };
 		273947FA12A5B22E005F6C0A /* UIView+SPY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+SPY.m"; path = "Classes/UIView+SPY.m"; sourceTree = SOURCE_ROOT; };
 		276DC55A12F3371400ACFF18 /* NSURLConnection+SPY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+SPY.h"; sourceTree = "<group>"; };
@@ -109,8 +105,6 @@
 			children = (
 				273947F512A5B22E005F6C0A /* NSObject+SPY.h */,
 				273947F612A5B22E005F6C0A /* NSObject+SPY.m */,
-				273947F712A5B22E005F6C0A /* SPY.h */,
-				273947F812A5B22E005F6C0A /* SPY.m */,
 				273947F912A5B22E005F6C0A /* UIView+SPY.h */,
 				273947FA12A5B22E005F6C0A /* UIView+SPY.m */,
 				276DC55A12F3371400ACFF18 /* NSURLConnection+SPY.h */,
@@ -158,7 +152,6 @@
 			files = (
 				AA747D9F0F9514B9006C5449 /* Inspector_Prefix.pch in Headers */,
 				273947FD12A5B22E005F6C0A /* NSObject+SPY.h in Headers */,
-				273947FF12A5B22E005F6C0A /* SPY.h in Headers */,
 				2739480112A5B22E005F6C0A /* UIView+SPY.h in Headers */,
 				276DC55C12F3371400ACFF18 /* NSURLConnection+SPY.h in Headers */,
 				D85F3AE813CEFE7E00AB1FD4 /* NSData+SPY.h in Headers */,
@@ -208,6 +201,8 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "Inspector" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -265,7 +260,6 @@
 			files = (
 				D8F4F50B13C94F81008AE218 /* NSURLConnection+SPY.m in Sources */,
 				273947FE12A5B22E005F6C0A /* NSObject+SPY.m in Sources */,
-				2739480012A5B22E005F6C0A /* SPY.m in Sources */,
 				2739480212A5B22E005F6C0A /* UIView+SPY.m in Sources */,
 				D85F3AE913CEFE7E00AB1FD4 /* NSData+SPY.m in Sources */,
 			);

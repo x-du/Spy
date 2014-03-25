@@ -14,7 +14,7 @@
 
 - (NSString*) toString {
 
-    return [[[NSString alloc] initWithData:self encoding:[NSString defaultCStringEncoding]] autorelease];
+    return [[NSString alloc] initWithData:self encoding:[NSString defaultCStringEncoding]];
 
 }
 

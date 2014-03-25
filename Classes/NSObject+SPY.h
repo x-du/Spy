@@ -14,15 +14,14 @@
 /**
  * Return the root window
  */
-+ (UIWindow*) rootWindow;
+- (UIWindow*) rootWindow;
 
 /** 
  * Print the help. 
  */ 
 - (NSString*) help; 
-+ (NSString*) help;
-+ (NSString*) helpSPY;
 
++ (NSString*) help;
 
 /**
  * Return the definition of the class
@@ -36,15 +35,6 @@
  * Return the long description that recursively list all ivars. Use visitedInstance dictionary to avoid infinit loop 
  */
 - (NSString*) longDescription;
-- (NSString*) longDescription:(NSMutableSet*) visitedInstances indentation:(NSInteger) indentation;
 
-/**
- Return the description of the ivars
- */
-- (NSString*) ivarDescription:(NSMutableSet*) visitedInstances recursive:(BOOL) recursive indentation:(NSInteger) indentation;	
-
-- (NSString*) spaces:(NSInteger) i;
-
-- (NSString*) convertTypeS: (NSString*) t;
-
+- (NSString*) jsonString;
 @end
